@@ -20,9 +20,13 @@
        <li class="nav-item">
         <a class="nav-link" href="../simpleblog/login.php">Login</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="../simpleblog/logout.php">Logout</a>
+          <?php if (isset($_SESSION['username']) == true): ?>
+            <a class="nav-link" href="../simpleblog/logout.php">Logout</a>
+          <?php endif; ?>
       </li>
+
     </ul>
   </div>
 </nav>
